@@ -1,0 +1,37 @@
+@import './variable.scss';
+
+.flex {
+    display: flex; // default flex direction is row
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-column {
+    @extend .flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    @extend .justify-content-center;
+    @extend .align-items-center;
+}
+
+.flex-column-center {
+    @extend .flex-column;
+    @extend .flex-center;
+}
+
+.text-primary {
+    color: $re-light-theme-primary-color-blue-600;
+}
+

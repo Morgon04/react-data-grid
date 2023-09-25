@@ -1,0 +1,18 @@
+@import '../../styles/common.scss';
+@import '../../styles/variable.scss';
+
+.button-example-container {
+
+    .button-example-sample {
+        padding: $re-32px;
+        border: 1px solid $re-light-theme-grayscale-color-700;
+        border-radius: $re-4px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .button-example-container {
+        width: 60%;
+        margin: 0 auto;
+    }
+}

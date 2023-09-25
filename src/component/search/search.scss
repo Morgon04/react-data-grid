@@ -1,0 +1,102 @@
+.search-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+
+    .MuiTextField-root {
+        width: 100%;
+
+        // .MuiInputBase-input {
+
+        // }
+    }
+
+    .search-recent-history-container {
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        border-radius: 4px;
+        z-index: 1000;
+
+        .MuiCardContent-root {
+            max-height: calc(35vh - 40px);
+            min-height: calc(35vh - 40px);
+        }
+
+        .search-recent-history-container-body {
+            .search-history-list {
+                margin-bottom: 12px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .search-history-list-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 8px 0;
+
+                    p {
+                        font-size: 14px;
+                        font-weight: 600;
+                        margin: 0;
+                    }
+
+                    .MuiSvgIcon-fontSizeMedium {
+                        font-size: 14px;
+                    }
+                }
+
+            }
+
+            .search-history-items {
+                display: flex;
+                flex-direction: column;
+                padding-top: 14px;
+
+                .search-history-item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 0 8px;
+
+                    &:hover {
+                        opacity: 1;
+                        cursor: pointer;
+                    }
+
+                    img {
+                        height: 16px;
+                        width: 100px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        opacity: .75;
+                        margin: 8px 0;
+
+                        &.text-center {
+                            text-align: center;
+                        }
+
+                        &:hover {
+                            opacity: 1;
+                            font-weight: 500;
+                        }
+                    }
+
+                    .MuiSvgIcon-fontSizeMedium {
+                        font-size: 14px;
+                    }
+                }
+
+
+
+            }
+        }
+    }
+}

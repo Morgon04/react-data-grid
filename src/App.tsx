@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import './styles/common.scss'
 import DataGridLayout from './component/layout/layout';
 
 function App() {
   return (
-    <div className="">
+    <div className="revedia-react">
       <DataGridLayout/>
     </div>
   );

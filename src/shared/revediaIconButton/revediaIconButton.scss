@@ -1,0 +1,8 @@
+// Variable Import
+@import '../../styles/variable.scss';
+
+.revedia-icon-button {
+    .MuiIconButton-colorPrimary {
+        color: $re-light-theme-primary-color-blue-600
+    }
+}

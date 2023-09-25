@@ -1,0 +1,63 @@
+// Variable Import
+@import '../../styles/variable.scss';
+
+.revedia-button {
+    .MuiButtonBase-root {
+        text-transform: none;
+
+        &.Mui-disabled {
+            opacity: 60%;
+        }
+
+        &.MuiButton-contained {
+            background-color: $re-light-theme-primary-color-blue-600;
+            box-shadow: none;
+            color: white;
+            font-size: $re-font-14;
+            font-weight: $re-font-weight-600;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $re-light-theme-primary-color-blue-700;
+                box-shadow: none;
+            }
+
+            
+
+            &.MuiButton-sizeSmall {
+                font-size: $re-font-12;
+            }
+
+            &.MuiButton-sizeLarge {
+                font-size: $re-font-16;
+            }
+        }
+
+        &.MuiButton-outlined {
+            color: $re-light-theme-primary-color-blue-800;
+            border-color: $re-light-theme-primary-color-blue-800;
+
+            &:hover {
+                background-color: $re-primary-blue-color-100;
+            }
+
+            &:focus {
+                background-color: $re-primary-blue-color-200;
+            }
+        }
+
+        &.MuiButton-text {
+            color: $re-light-theme-primary-color-blue-800;
+
+            &:hover {
+                background-color: $re-primary-blue-color-100;
+            }
+
+            &:focus {
+                background-color: $re-primary-blue-color-200;
+            }
+        }
+    }
+
+}
