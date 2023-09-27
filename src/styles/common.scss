@@ -35,3 +35,103 @@
     color: $re-light-theme-primary-color-blue-600;
 }
 
+.text-base {
+    color: $re-light-theme-grayscale-color-1400;
+}
+
+.paragraph-small {
+    font-size: $re-font-12;
+}
+
+.paragraph-medium {
+    font-size: $re-font-14;
+}
+
+.paragraph-large {
+    font-size: $re-font-16;
+}
+
+.para-large-bold {
+    @extend .paragraph-large;
+    font-weight: $re-font-weight-700;
+}
+
+.para-medium-semi-bold {
+    @extend .paragraph-medium;
+    font-weight: $re-font-weight-500;
+}
+
+.relax-regular-500 {
+    @extend .paragraph-small;
+    font-weight: $re-font-weight-500;
+}
+
+.relax-regular-semi-bold {
+    @extend .paragraph-small;
+    font-weight: $re-font-weight-600;
+}
+
+.menu-hover {
+    opacity: 1;
+    background-color: $re-light-theme-primary-color-blue-100;
+    color: $re-light-theme-primary-color-blue-600;
+    border-radius: $re-4px;
+
+}
+
+.span-border {
+    position: absolute;
+    left: 0;
+    height: 18px;
+    width: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: $re-light-theme-primary-color-blue-600;
+
+}
+
+.nav-items {
+    .nav-item {
+        width: 75%;
+        .nav-item-header {
+            margin: 0;
+            padding: $re-10px $re-10px ;
+
+            // &:hover {
+            //     @extend .menu-hover
+            // }
+        }
+
+        .nav-item-child {
+            padding-left: $re-14px;
+            position: relative;
+
+            &:hover {
+                @extend .menu-hover;
+            }
+            &.active {
+                @extend .menu-hover;
+                margin: $re-2px 0;
+
+                .menu-span-border {
+                    @extend .span-border;
+                    top: $re-8px
+                }
+            }
+
+            a {
+                text-decoration: none;
+                p {
+                    margin: 0;
+                    padding: $re-10px 0;
+                    cursor: pointer;  
+                }
+            }
+            
+        }
+    }
+}
+
+.mr-bt-12px {
+    margin-bottom: $re-12px;
+}

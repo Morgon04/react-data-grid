@@ -1,5 +1,10 @@
-.demo-data-grid .MuiDataGrid-columnHeaders {
-    background: #f9fafb!important;
-    color: #7c90a0!important;
-    font-weight: 600;
+.demo-data-grid {
+
+    width: 80%;
+    margin: 0 auto;
+    .MuiDataGrid-columnHeaders {
+        background: #f9fafb !important;
+        color: #7c90a0 !important;
+        font-weight: 600;
+    }
 }

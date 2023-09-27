@@ -32,7 +32,8 @@ const SearchInput = ({ placeholder = 'Search...', showHistory = true }) => {
     }
   };
 
-  return (<div>
+  return (
+    <div className='search-revedia'>
     <p>Search Input, with Recent Search</p>
 
     <div className='search-input'>

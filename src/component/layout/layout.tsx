@@ -10,6 +10,7 @@ import ReactRoutes from "../routes/routes";
 
 // Components Import
 import Sidenav from "../sidenav/sidenav";
+import RevediaHeader from "../header/header";
 
 // SCSS Import
 import './layout.scss';
@@ -26,7 +27,7 @@ const DataGridLayout = () => {
             '& .MuiDrawer-paper': {
               width: 300,
               boxSizing: 'border-box',
-              background: '#141126',
+              background: '#ffffff',
               transition: 'width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
               padding: '12px'
             },
@@ -38,9 +39,11 @@ const DataGridLayout = () => {
         </Drawer>
 
         <div className="main-container">
-          <div className="main-container-body">
+          <RevediaHeader />
+          <div style={{ marginTop: '50px', paddingBottom: '30px' }}>
             <ReactRoutes />
           </div>
+          <footer></footer>
         </div>
       </Box>
     </BrowserRouter>

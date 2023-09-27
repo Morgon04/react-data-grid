@@ -1,18 +1,40 @@
 @import '../../styles/common.scss';
 @import '../../styles/variable.scss';
 
-.button-example-container {
+.buttons-example {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: auto;
 
-    .button-example-sample {
-        padding: $re-32px;
-        border: 1px solid $re-light-theme-grayscale-color-700;
-        border-radius: $re-4px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .button-example-container {
-        width: 60%;
+    .button-example-content {
+        width: 80%;        
         margin: 0 auto;
+
+        .button-example-content-body {
+            width: 60%;
+            margin: 0 auto;
+
+            .button-example-container {
+                h3 {
+                    margin-top: 40px;
+                    scroll-margin-top: 70px;
+                }
+                .button-example-sample {
+                    padding: $re-32px;
+                    border: 1px solid $re-light-theme-grayscale-color-700;
+                    border-radius: $re-4px;
+                }
+            }
+        }
+    }
+
+    .nav-items {
+        width: 20%;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+
     }
 }

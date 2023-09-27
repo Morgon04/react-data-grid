@@ -22,16 +22,6 @@
                 background-color: $re-light-theme-primary-color-blue-700;
                 box-shadow: none;
             }
-
-            
-
-            &.MuiButton-sizeSmall {
-                font-size: $re-font-12;
-            }
-
-            &.MuiButton-sizeLarge {
-                font-size: $re-font-16;
-            }
         }
 
         &.MuiButton-outlined {
@@ -57,6 +47,14 @@
             &:focus {
                 background-color: $re-primary-blue-color-200;
             }
+        }
+
+        &.MuiButton-sizeSmall {
+            font-size: $re-font-12;
+        }
+
+        &.MuiButton-sizeLarge {
+            font-size: $re-font-16;
         }
     }
 
