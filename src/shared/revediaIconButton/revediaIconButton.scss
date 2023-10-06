@@ -3,6 +3,22 @@
 
 .revedia-icon-button {
     .MuiIconButton-colorPrimary {
-        color: $re-light-theme-primary-color-blue-600
+        color: $re-blue-color-600
+    }
+
+    .MuiIconButton-colorWhite {
+        color: $re-white-color;
+    }
+
+    .MuiIconButton-colorError {
+        color: $re-error-color-600;
+    }
+
+    .MuiIconButton-colorSuccess {
+        color: $re-success-color-600;
+    }
+
+    .MuiIconButton-colorWarning {
+        color: $re-warning-color-600;
     }
 }

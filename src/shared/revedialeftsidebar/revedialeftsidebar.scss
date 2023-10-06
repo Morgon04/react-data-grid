@@ -1,0 +1,45 @@
+@import '../../styles/variable.scss';
+
+$re-left-sidebar-height: 750px;
+
+.revedia-left-sidebar {
+    height: $re-left-sidebar-height;
+    background: $re-white-color;
+    box-sizing: border-box;
+
+    .revedia-left-sidebar-logo {
+        padding: $re-16px;
+    }
+
+    &.revedia-left-sidebarCollapsed {
+        .revedia-left-sidebar-logo {
+            padding: $re-12px;
+        }
+
+        .revedia-left-sidebar-footer {
+            padding: $re-12px;
+        }
+
+        .revedia-left-sidebar-content {
+            padding: $re-12px;
+            height: calc($re-left-sidebar-height - 140px);
+        }
+    }
+
+    .revedia-left-sidebar-product {
+        padding: $re-12px $re-16px;
+        background-color: $re-grayscale-color-300;
+        color: $re-grayscale-color-1400;
+        font-weight: $re-font-weight-600;
+    }
+
+    .revedia-left-sidebar-content {
+        padding: $re-16px;
+        height: calc($re-left-sidebar-height - 210px);
+        border-bottom: 1px solid $re-grayscale-color-400;
+    }
+
+    .revedia-left-sidebar-footer {
+        padding: $re-16px;
+    }
+}

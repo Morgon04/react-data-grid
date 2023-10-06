@@ -1,0 +1,20 @@
+// Variable Import
+@import '../../styles/variable.scss';
+
+.revedia-loading-button {
+    .MuiLoadingButton-root {
+        text-transform: none;
+        
+        &.MuiLoadingButton-loading.MuiButton-containedPrimary {
+            background-color: $re-blue-color-600;
+            box-shadow: none;
+            color: transparent;
+            font-size: $re-font-14;
+            font-weight: $re-font-weight-600;
+
+            .MuiLoadingButton-loadingIndicator {
+                color: $re-white-color;
+            }
+        }
+    }
+}

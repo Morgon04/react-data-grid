@@ -23,8 +23,12 @@
                 }
                 .button-example-sample {
                     padding: $re-32px;
-                    border: 1px solid $re-light-theme-grayscale-color-700;
+                    border: 1px solid $re-grayscale-color-700;
                     border-radius: $re-4px;
+
+                    &.contrast {
+                        background-color: rgb(60, 142, 243);
+                    }
                 }
             }
         }

@@ -12,7 +12,13 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 
 // Route List Import
-import { dataGridComponentPath, searchInputComponentPath, buttonComponentPath } from '../routes/routeList';
+import {
+    buttonComponentPath,
+    dataGridComponentPath,
+    searchInputComponentPath,
+    buttonGroupComponentPath,
+    leftSideBarComponentPath
+} from '../routes/routeList';
 
 // logo Import
 import smaiLogo from '../../assets/SVG/SAI-media-logo-horizontal-black.svg'
@@ -32,6 +38,14 @@ const componentsArray = [
     {
         to: buttonComponentPath,
         name: 'Button'
+    },
+    {
+        to: buttonGroupComponentPath,
+        name: 'Button Group'
+    },
+    {
+        to: leftSideBarComponentPath,
+        name: 'Left Side Bar'
     }
 ];
 
@@ -50,7 +64,7 @@ const Sidenav = () => {
         return componentsArray.map((component, index) => {
             return <Link
                 to={component.to}
-                className={`component-child-link ${component.to === activeElement ? 'active-element': ''}`}
+                className={`component-child-link ${component.to === activeElement ? 'active-element' : ''}`}
                 key={index}
             >
                 <p className={'component-child-link-name'}>

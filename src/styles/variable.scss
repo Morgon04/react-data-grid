@@ -1,26 +1,73 @@
-// Colors
+// White Color
+$re-white-color: #ffffff;
 
-$re-primary-blue-color-100: #E6F7FF;
-$re-primary-blue-color-200: #A8DFFF;
+// Blue Color
+$re-blue-color-100: #E6F7FF;
+$re-blue-color-200: #A8DFFF;
+$re-blue-color-300: #7ACAFF;
+$re-blue-color-400: #52B4FF;
+$re-blue-color-500: #2795F5; 
+$re-blue-color-600: #0074E8; // Primary Color
+$re-blue-color-700: #005AC2;
+$re-blue-color-800: #00439C;
+$re-blue-color-900: #002F75;
+$re-blue-color-1000: #001D4F;
 
-$re-dark-theme-primary-color-blue-300: #7ACAFF;
-$re-dark-theme-primary-color-blue-400: #52B4FF;
-$re-dark-theme-primary-color-blue-500: #2795F5; // Blue Dark theme Primary Colors 
+// Gray Scale Colors
+$re-grayscale-color-100: #FFFFFF;
+$re-grayscale-color-200: #E7ECF1;
+$re-grayscale-color-300: #F0F4F8;
+$re-grayscale-color-400: #E7ECF1;
+$re-grayscale-color-500: #D0D7DE;
+$re-grayscale-color-600: #BAC0C7; // Primary Color
+$re-grayscale-color-700: #A5ACB4;
+$re-grayscale-color-800: #8C939F;
+$re-grayscale-color-900: #656C78;
+$re-grayscale-color-1000: #656C78;
+$re-grayscale-color-1100: #424850;
+$re-grayscale-color-1200: #393F48;
+$re-grayscale-color-1300: #2E323A;
+$re-grayscale-color-1400: #25282E;
+$re-grayscale-color-1500: #1B1E22;
+$re-grayscale-color-1600: #121417; 
 
-$re-light-theme-primary-color-blue-100: #E6F7FF;
-$re-light-theme-primary-color-blue-600: #0074E8;
-$re-light-theme-primary-color-blue-700: #005AC2;
-$re-light-theme-primary-color-blue-800: #00439C; // Blue Ligtht theme Primary Colors 
 
-$re-light-theme-grayscale-color-200: #E7ECF1;
-$re-light-theme-grayscale-color-400: #E7ECF1;
-$re-light-theme-grayscale-color-700: #A5ACB4;
-$re-light-theme-grayscale-color-900: #656C78;
-$re-light-theme-grayscale-color-1400: #25282E;
-$re-light-theme-grayscale-color-1600: #121417; // Gray Scale Colors
+// Error Color
+$re-error-color-100: #FFF2F0;
+$re-error-color-200: #FFD5CF;
+$re-error-color-300: #FFAFA6;
+$re-error-color-400: #F58078;
+$re-error-color-500: #EB625D;
+$re-error-color-600: #DC2626; // Primary Color
+$re-error-color-700: #B5161B;
+$re-error-color-800: #8F0A13;
+$re-error-color-900: #69020C;
+$re-error-color-1000: #420109;
 
+// Success
+$re-success-color-100: #DEFFE7;
+$re-success-color-200: #A6EEB9;
+$re-success-color-300: #71CD8A;
+$re-success-color-400: #43B766;
+$re-success-color-500: #20A54C;
+$re-success-color-600: #008933; // Primary Color
+$re-success-color-700: #006529;
+$re-success-color-800: #00461F;
+$re-success-color-900: #002D15;
+$re-success-color-1000: #001F0F;
 
-$re-error-color:#DC2626;  
+// Warning
+$re-warning-color-100: #FFFCE6;
+$re-warning-color-200: #FFF1A3;
+$re-warning-color-300: #FFE77A;
+$re-warning-color-400: #FFD952;
+$re-warning-color-500: #FFC929;
+$re-warning-color-600: #FFB600; // Primary Color
+$re-warning-color-700: #D69200;
+$re-warning-color-800: #A46A00;
+$re-warning-color-900: #895400;
+$re-warning-color-1000: #663C00;
+
 
 // Font Sizes
 $re-font-10: 10px;
@@ -31,6 +78,7 @@ $re-font-14: 14px;
 $re-font-16: 16px;
 $re-font-18: 18px;
 $re-font-24: 24px;
+$re-font-32: 32px;
 
 // Font Weight
 $re-font-weight-500: 500; // medium
@@ -39,6 +87,7 @@ $re-font-weight-700: 700; // bold
 $re-font-weight-800: 800; // bolder
 
 // px value
+$re-1px: 1px;
 $re-2px: 2px;
 $re-4px: 4px;
 $re-5px: 5px;
@@ -54,3 +103,16 @@ $re-22px: 22px;
 $re-24px: 24px;
 $re-28px: 28px;
 $re-32px: 32px;
+$re-48px: 48px;
+
+// percentage
+$re-per-10: 10%;
+$re-per-20: 20%;
+$re-per-30: 30%;
+$re-per-40: 40%;
+$re-per-50: 50%;
+$re-per-60: 60%;
+$re-per-70: 70%;
+$re-per-80: 80%;
+$re-per-90: 90%;
+$re-per-100: 100%;

@@ -27,6 +27,16 @@ export const buttonRightNavDatas = [
         { name: "Icons and Lables", id: 'text-button-icon-label' },
     ],
   },
+  {
+    itemHeader: "Other",
+    items: [
+        { name: "Contrast", id: 'contrast-brand-buttons' },
+        { name: "Error", id: 'error-brand-buttons' },
+        { name: "Success", id: 'success-brand-buttons' },
+        { name: "Warning", id: 'Warning-brand-buttons' },
+        { name: "Loading", id: 'loading-brand-buttons' },
+    ],
+  },
 ];
 
 export default buttonRightNavDatas;

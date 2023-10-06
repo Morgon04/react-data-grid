@@ -6,12 +6,14 @@ import { useLocation } from 'react-router-dom';
 
 // Material UI Import
 import SendIcon from '@mui/icons-material/Send';
+import SaveIcon from '@mui/icons-material/Save';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 // Shared Components Import
 import RevediaStack from '../../shared/revediaStack/revediaStack';
 import RevediaButton from '../../shared/revediabutton/revediabutton';
 import RevediaIconButton from '../../shared/revediaIconButton/revediaIconButton';
+import RevediaLoadingButton from '../../shared/revediaLoadingButton/RevediaLoadingButton';
 
 // Data Import
 import buttonRightNavDatas from './data'
@@ -28,11 +30,11 @@ const ButtonExample = () => {
         setNavActiveElement(`${buttonLocation.pathname}${buttonLocation.hash}`)
     }, [buttonLocation]);
 
-    const getNavActiveChildName = (id: string):boolean => {
+    const getNavActiveChildName = (id: string): boolean => {
         console.log(navActiveElement)
         return navActiveElement === `${buttonLocation.pathname}#${id}`;
     };
-    
+
     return (
         <div className='buttons-example'>
             <div className="button-example-content">
@@ -129,6 +131,58 @@ const ButtonExample = () => {
                             <RevediaButton endIcon={<SendIcon />}> Send </RevediaButton>
                         </RevediaStack>
                     </div>
+                    <div className="button-example-container">
+                        <h2>Contrast Buttons</h2>
+                        <p id='contrast-brand-buttons'>Primary, Secondary and Text</p>
+                        <RevediaStack direction={"row"} spacing={2} alignItems={'center'} justifyContent={'center'} className='button-example-sample basic contrast'>
+                            <RevediaButton white variant='contained'> I'm Contained </RevediaButton>
+                            <RevediaButton white variant='outlined'> I'm Outlined </RevediaButton>
+                            <RevediaButton white> I'm Text </RevediaButton>
+                        </RevediaStack>
+                    </div>
+
+                    <div className="button-example-container">
+                        <h2>Error Buttons</h2>
+                        <p id='error-brand-buttons'>Primary, Secondary and Text</p>
+                        <RevediaStack direction={"row"} spacing={2} alignItems={'center'} justifyContent={'center'} className='button-example-sample basic'>
+                            <RevediaButton color='error' variant='contained'> I'm Contained </RevediaButton>
+                            <RevediaButton color='error' variant='outlined'> I'm Outlined </RevediaButton>
+                            <RevediaButton color='error'> I'm Text </RevediaButton>
+                        </RevediaStack>
+                    </div>
+
+                    <div className="button-example-container">
+                        <h2>Success Buttons</h2>
+                        <p id='success-brand-buttons'>Primary, Secondary and Text</p>
+                        <RevediaStack direction={"row"} spacing={2} alignItems={'center'} justifyContent={'center'} className='button-example-sample basic'>
+                            <RevediaButton color='success' variant='contained'> I'm Contained </RevediaButton>
+                            <RevediaButton color='success' variant='outlined'> I'm Outlined </RevediaButton>
+                            <RevediaButton color='success'> I'm Text </RevediaButton>
+                        </RevediaStack>
+                    </div>
+                    <div className="button-example-container">
+                        <h2>Warning Buttons</h2>
+                        <p id='Warning-brand-buttons'>Primary, Secondary and Text</p>
+                        <RevediaStack direction={"row"} spacing={2} alignItems={'center'} justifyContent={'center'} className='button-example-sample basic'>
+                            <RevediaButton color='warning' variant='contained'> I'm Contained </RevediaButton>
+                            <RevediaButton color='warning' variant='outlined'> I'm Outlined </RevediaButton>
+                            <RevediaButton color='warning'> I'm Text </RevediaButton>
+                        </RevediaStack>
+                    </div>
+                    <div className="button-example-container">
+                        <h2>Loading Buttons</h2>
+                        <p id='loading-brand-buttons'>Loading, Loading Indication and Loading with text</p>
+                        <RevediaStack direction={"row"} spacing={2} alignItems={'center'} justifyContent={'center'} className='button-example-sample basic'>
+                            <RevediaLoadingButton loading> Loading </RevediaLoadingButton>
+                            <RevediaLoadingButton loading loadingIndicator='Loading...' variant='outlined'> Fetch Data</RevediaLoadingButton>
+                            <RevediaLoadingButton
+                                loading
+                                loadingPosition="start"
+                                startIcon={<SaveIcon />} > 
+                            Save 
+                            </RevediaLoadingButton>
+                        </RevediaStack>
+                    </div>
                 </div>
             </div>
 
@@ -141,10 +195,10 @@ const ButtonExample = () => {
                             <p className='text-base relax-regular-bold nav-item-header'>{data.itemHeader}</p>
                             {data.items.map((item, index) => {
                                 return <div className={`${getNavActiveChildName(item.id) ? 'active' : ''} nav-item-child`} key={index}>
-                                    <span className={getNavActiveChildName(item.id)  ? 'menu-span-border': ''}></span>
-                                    <a 
-                                    href={`${buttonLocation.pathname}#${item.id}`}
-                                    key={index} 
+                                    <span className={getNavActiveChildName(item.id) ? 'menu-span-border' : ''}></span>
+                                    <a
+                                        href={`${buttonLocation.pathname}#${item.id}`}
+                                        key={index}
                                     >
                                         <p className='text-base relax-regular-500'>
                                             {item.name}

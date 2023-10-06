@@ -1,51 +1,242 @@
 // Variable Import
 @import '../../styles/variable.scss';
 
+@mixin border($width, $state, $color) {
+    border: $width $state $color;
+}
+
+@mixin paddingTopAndBottom($expression) {
+    padding-top: $expression;
+    padding-bottom: $expression;
+}
+
 .revedia-button {
+
     .MuiButtonBase-root {
         text-transform: none;
 
         &.Mui-disabled {
-            opacity: 60%;
+            opacity: $re-per-60;
         }
 
         &.MuiButton-contained {
-            background-color: $re-light-theme-primary-color-blue-600;
+            background-color: $re-blue-color-600;
             box-shadow: none;
-            color: white;
+            color: $re-white-color;
             font-size: $re-font-14;
             font-weight: $re-font-weight-600;
 
             &:hover,
             &:focus,
             &:active {
-                background-color: $re-light-theme-primary-color-blue-700;
+                background-color: $re-blue-color-700;
                 box-shadow: none;
             }
+
+            &.MuiButton-containedError {
+                background-color: $re-error-color-600;
+
+                &:hover {
+                    background-color: $re-error-color-700;
+                }
+
+                &:active {
+                    background-color: $re-error-color-800;
+                    @include border($re-2px, solid, $re-error-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+
+                &:focus {
+                    @include border($re-2px, solid, $re-error-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+            }
+
+            &.MuiButton-containedSuccess {
+                background-color: $re-success-color-600;
+
+                &:hover {
+                    background-color: $re-success-color-700;
+                }
+
+                &:active {
+                    background-color: $re-success-color-800;
+                    @include border($re-2px, solid, $re-success-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+
+                &:focus {
+                    @include border($re-2px, solid, $re-success-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+            }
+
+            &.MuiButton-containedWarning {
+                background-color: $re-warning-color-600;
+
+                &:hover {
+                    background-color: $re-warning-color-700;
+                }
+
+                &:active {
+                    background-color: $re-warning-color-800;
+                    @include border($re-2px, solid, $re-warning-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+
+                &:focus {
+                    @include border($re-2px, solid, $re-warning-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+            } 
         }
 
         &.MuiButton-outlined {
-            color: $re-light-theme-primary-color-blue-800;
-            border-color: $re-light-theme-primary-color-blue-800;
+            color: $re-blue-color-800;
+            border-color: $re-blue-color-800;
 
             &:hover {
-                background-color: $re-primary-blue-color-100;
+                background-color: $re-blue-color-100;
             }
 
             &:focus {
-                background-color: $re-primary-blue-color-200;
+                background-color: $re-blue-color-200;
+            }
+
+            &.MuiButton-outlinedError {
+                @include border($re-1px, solid, $re-error-color-600);
+                color: $re-error-color-600;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: $re-error-color-100;
+                }
+
+                &:active {
+                    background-color: $re-error-color-200;
+                    @include border($re-2px, solid, $re-error-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+
+                &:focus {
+                    @include border($re-2px, solid, $re-error-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+            }
+
+            &.MuiButton-outlinedSuccess {
+                @include border($re-1px, solid, $re-success-color-600);
+                color: $re-success-color-600;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: $re-success-color-100;
+                }
+
+                &:active {
+                    background-color: $re-success-color-200;
+                    @include border($re-2px, solid, $re-success-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+
+                &:focus {
+                    @include border($re-2px, solid, $re-success-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+            }
+
+            &.MuiButton-outlinedWarning {
+                @include border($re-1px, solid, $re-warning-color-600);
+                color: $re-warning-color-600;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: $re-warning-color-100;
+                }
+
+                &:active {
+                    background-color: $re-warning-color-200;
+                    @include border($re-2px, solid, $re-warning-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+
+                &:focus {
+                    @include border($re-2px, solid, $re-warning-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
             }
         }
 
         &.MuiButton-text {
-            color: $re-light-theme-primary-color-blue-800;
+            color: $re-blue-color-800;
 
             &:hover {
-                background-color: $re-primary-blue-color-100;
+                background-color: $re-blue-color-100;
             }
 
             &:focus {
-                background-color: $re-primary-blue-color-200;
+                background-color: $re-blue-color-200;
+            }
+
+            &.MuiButton-textError {
+
+                color: $re-error-color-600;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: $re-error-color-100;
+                }
+
+                &:active {
+                    background-color: $re-error-color-200;
+                    @include border($re-2px, solid, $re-error-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+
+                &:focus {
+                    @include border($re-2px, solid, $re-error-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+            }
+
+            &.MuiButton-textSuccess {
+                color: $re-success-color-600;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: $re-success-color-100;
+                }
+
+                &:active {
+                    background-color: $re-success-color-200;
+                    @include border($re-2px, solid, $re-success-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+
+                &:focus {
+                    @include border($re-2px, solid, $re-success-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+            }
+
+            &.MuiButton-textWarning {
+                color: $re-warning-color-600;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: $re-warning-color-100;
+                }
+
+                &:active {
+                    background-color: $re-warning-color-200;
+                    @include border($re-2px, solid, $re-warning-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
+
+                &:focus {
+                    @include border($re-2px, solid, $re-warning-color-700);
+                    @include paddingTopAndBottom(calc($re-6px - $re-2px));
+                }
             }
         }
 
@@ -55,6 +246,73 @@
 
         &.MuiButton-sizeLarge {
             font-size: $re-font-16;
+        }
+    }
+
+    &.white {
+        .MuiButtonBase-root.MuiButton-contained {
+            background-color: $re-white-color;
+            color: $re-blue-color-600;
+
+            &:hover {
+                background-color: $re-blue-color-100;
+            }
+
+            &:active {
+                background-color: $re-blue-color-200;
+                @include border($re-2px, solid, $re-blue-color-200);
+                @include paddingTopAndBottom(calc($re-6px - $re-2px));
+            }
+
+            &:focus {
+                @include border($re-2px, solid, $re-blue-color-200);
+                @include paddingTopAndBottom(calc($re-6px - $re-2px));
+            }
+        }
+
+        .MuiButtonBase-root.MuiButton-outlined {
+            color: $re-white-color;
+            border: 1px solid $re-white-color;
+            background-color: transparent;
+            
+            &:hover {
+                background-color: $re-blue-color-700;
+            }
+
+            &:active {
+                background-color: $re-blue-color-800;
+                @include border($re-2px, solid, $re-blue-color-200);
+                @include paddingTopAndBottom(calc($re-6px - $re-2px));
+            }
+
+            &:focus {
+                @include border($re-2px, solid, $re-blue-color-200);
+                @include paddingTopAndBottom(calc($re-6px - $re-2px));
+            }
+        }
+
+        .MuiButtonBase-root.MuiButton-text {
+            color: $re-white-color;
+            background-color: transparent;
+
+            &:hover {
+                background-color: $re-blue-color-700;
+            }
+
+            &:active {
+                background-color: $re-blue-color-800;
+                @include border($re-2px, solid, $re-blue-color-200);
+                @include paddingTopAndBottom(calc($re-6px - $re-2px));
+            }
+
+            &:focus {
+                @include border($re-2px, solid, $re-blue-color-200);
+                @include paddingTopAndBottom(calc($re-6px - $re-2px));
+            }
+        }
+
+        &.Mui-disabled {
+            opacity: $re-per-60;
         }
     }
 
